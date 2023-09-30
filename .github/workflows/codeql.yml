@@ -48,6 +48,10 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
+    - uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '5.0.x'
+
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v2
@@ -80,3 +84,7 @@ jobs:
       uses: github/codeql-action/analyze@v2
       with:
         category: "/language:${{matrix.language}}"
+
+    - uses: actions/upload-artifact@v3
+      with:
+        path: /results/javascript.sarif
