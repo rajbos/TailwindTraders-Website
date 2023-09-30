@@ -87,4 +87,4 @@ jobs:
 
     - uses: actions/upload-artifact@v3
       with:
-        path: /results/javascript.sarif
+        path: results/javascript.sarif
