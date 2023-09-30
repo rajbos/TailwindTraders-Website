@@ -70,7 +70,7 @@ jobs:
     # - name: Autobuild
     #   uses: github/codeql-action/autobuild@v2
 
-    - if: ${{ (matrix.language == 'csharp' }}
+    - if: ${{ matrix.language == 'csharp' }}
       name: Build the solution
       run: |
          dotnet build TailwindTraders.Website/Source/Tailwind.Traders.Web.sln
