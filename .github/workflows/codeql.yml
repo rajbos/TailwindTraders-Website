@@ -52,6 +52,10 @@ jobs:
       with:
         dotnet-version: '5.0.x'
 
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 16
+
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v2
